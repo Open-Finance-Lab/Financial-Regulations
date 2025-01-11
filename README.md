@@ -1,1 +1,1 @@
-# Finnancial-Regulations
+# Financial-Regulations
