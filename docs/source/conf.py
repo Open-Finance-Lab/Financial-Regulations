@@ -12,9 +12,9 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'OpenFinLLM Leaderboard Documentation'
-copyright = '2025, OpenFinLLM Leaderboard'
-author = 'OpenFinLLM Leaderboard'
+project = 'Financial Regulations Documentation'
+copyright = '2025, Financial Regulations'
+author = 'Financial Regulations'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
