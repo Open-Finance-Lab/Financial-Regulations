@@ -1,1 +1,1 @@
-# Financial-Regulations
+# FinLLM-Leaderboard
