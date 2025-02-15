@@ -17,10 +17,15 @@ Regulations Challenge Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: User Documentation
+   :caption: Introduction
 
-   user/introduction
-   user/tasks
-   user/datasets
-   user/contribute
+   intro/overview
+   intro/workflow
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Tasks and Datasets
+   
+   task/common_domain_model
+   task/model_openness_framework
+   task/extensible_business_reporting_language
