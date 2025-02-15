@@ -1,9 +1,9 @@
-.. OpenFinLLM Leaderboard Documentation documentation master file, created by
+.. Regulations Challenge documentation master file, created by
    sphinx-quickstart on Tue Jan 21 19:38:31 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-OpenFinLLM Leaderboard Documentation documentation
+Regulations Challenge Documentation
 ==================================================
 
 .. Add your content using ``reStructuredText`` syntax. See the
@@ -17,9 +17,15 @@ OpenFinLLM Leaderboard Documentation documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: User Documentation
+   :caption: Introduction
 
-   user/introduction
-   user/usage
-   user/contribute
+   intro/overview
+   intro/workflow
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Tasks and Datasets
+
+   task/cdm
+   task/mof
+   task/xbrl
