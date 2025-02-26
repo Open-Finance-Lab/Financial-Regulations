@@ -1,9 +1,9 @@
-.. Regulations Challenge documentation master file, created by
+.. Financial Regulations documentation master file, created by
    sphinx-quickstart on Tue Jan 21 19:38:31 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Regulations Challenge Documentation
+Financial Regulations Documentation
 ==================================================
 
 .. Add your content using ``reStructuredText`` syntax. See the
