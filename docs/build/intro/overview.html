@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Overview &mdash; Financial Regulations Documentation 1.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=e8ce10b2" />
 
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Workflow" href="workflow.html" />
-    <link rel="prev" title="Regulations Challenge Documentation" href="../index.html" /> 
+    <link rel="prev" title="Financial Regulations Documentation" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +46,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-this-documentation">Using This Documentation</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="workflow.html">Workflow</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tasks and Datasets</span></p>
@@ -82,32 +85,78 @@
              
   <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
-<p>The financial industry operates within a labyrinth of complex regulations and industry standards designed to maintain market integrity and ensure reliable financial reporting and compliance. Professionals and organizations grapple with several key challenges:</p>
+<p>The financial industry operates within a complex environment of regulations
+and standards aimed at maintaining market integrity and ensuring reliable
+reporting and compliance. These regulations and standards exhibit several
+key challenges:</p>
 <ul class="simple">
-<li><p><strong>Complexity</strong>: Financial regulations are intricate, reflecting the sophisticated nature of markets and products.</p></li>
-<li><p><strong>Frequent Updates</strong>: Regulations evolve continually to address technological advancements and emerging risks.</p></li>
-<li><p><strong>Jurisdictional Differences</strong>: Varying legal systems and economic conditions across countries can complicate compliance for multinational entities.</p></li>
-<li><p><strong>Specialized Terminology</strong>: Precision-oriented language requires deep domain expertise for accurate interpretation.</p></li>
+<li><p><strong>Complexity</strong>: Financial products and markets are highly sophisticated,
+demanding detailed and sometimes overlapping regulatory provisions.</p></li>
+<li><p><strong>Frequent Updates</strong>: Regulatory frameworks adapt continuously to reflect
+evolving market conditions, emerging technologies, and new risks.</p></li>
+<li><p><strong>Jurisdictional Differences</strong>: Countries and regions vary in their
+legal systems and economic contexts, adding further complications for
+multinational financial activities.</p></li>
+<li><p><strong>Specialized Terminology</strong>: Precision-oriented language can be difficult
+to interpret, requiring deep expertise to ensure accurate application.</p></li>
 </ul>
-<p>Effectively navigating these regulations demands not only subject-matter expertise but also the ability to parse nuanced language and foresee regulatory implications. Large language models (LLMs)—such as GPT-4o, Llama 3.1, and Mistral Large 2—have demonstrated remarkable capabilities in natural language understanding, making them promising tools for automating tasks in the financial domain. However, they also face hurdles in accurately handling specialized regulatory language, keeping pace with ongoing updates, and maintaining interpretability and ethical standards in their responses.</p>
-<hr class="docutils" />
-<p><strong>About the Regulations Challenge</strong></p>
-<p>Originally introduced at <a class="reference external" href="https://coling2025regulations.thefin.ai">COLING 2025 Regulations Challenge</a>, this initiative features nine tasks aimed at pushing the boundaries of LLMs in understanding, interpreting, and applying regulatory knowledge within the finance industry. These tasks address critical issues such as regulatory complexity, domain-specific terminology, ethical considerations, standards compliance, and model interpretability.</p>
-<p>In this competition, we have selected three key tasks from the larger Regulations Challenge:</p>
+<p>Navigating these intricacies calls for domain-specific knowledge and the
+ability to interpret nuanced legal language. Large language models (LLMs),
+such as GPT-4o, Llama 3.1, and Mistral Large 2, have shown remarkable potential
+in natural language understanding and generation. However, these models face
+unique hurdles in the financial domain, including handling specialized regulatory
+language, staying current with rapidly evolving standards, and addressing
+concerns related to explainability and ethics.</p>
+<p>To help researchers and practitioners address these challenges, we have
+developed a <strong>Financial Regulations dataset</strong> that covers a wide range of
+regulatory texts and tasks. This dataset underpins multiple initiatives,
+including:</p>
 <ol class="arabic simple">
-<li><p><strong>Common Domain Model (CDM)</strong></p></li>
-<li><p><strong>Model Openness Framework (MOF)</strong></p></li>
-<li><p><strong>eXtensible Business Reporting Language (XBRL)</strong></p></li>
+<li><p>The <a class="reference external" href="https://coling2025regulations.thefin.ai">COLING 2025 Regulations Challenge</a>,
+featuring nine tasks aimed at pushing the limits of LLMs in interpreting
+and applying financial regulations.</p></li>
+<li><p>A follow-up competition focusing on three core areas:</p>
+<ul class="simple">
+<li><p>Common Domain Model (CDM)</p></li>
+<li><p>Model Openness Framework (MOF)</p></li>
+<li><p>eXtensible Business Reporting Language (XBRL)</p></li>
+</ul>
+</li>
 </ol>
-<p>By focusing on these three tasks, participants gain hands-on experience with real-world financial data and regulatory scenarios—an invaluable step toward building more robust, transparent, and compliant AI-driven solutions. We invite students, researchers, and practitioners who are passionate about finance and language technologies to develop novel approaches that advance LLM capabilities in addressing the challenges of financial regulations.</p>
-<p>In the following sections, you will find task-specific instructions, datasets, and evaluation metrics. Thank you for joining us on this journey to explore and enhance the role of LLMs in financial regulation, and good luck in the competition!</p>
+<p>While each event highlights different aspects of the dataset, our overarching
+goal remains to expand the community’s understanding of financial regulations
+and to foster the development of robust, transparent, and compliant AI-driven
+solutions. In this documentation, we provide insights into the dataset’s
+structure and guidelines for using it in research and real-world
+applications.</p>
+<section id="using-this-documentation">
+<h2>Using This Documentation<a class="headerlink" href="#using-this-documentation" title="Link to this heading"></a></h2>
+<p>This documentation serves as a resource for anyone wishing to work with
+the Financial Regulations dataset—whether for academic exploration, industry
+applications, or challenge participation. Each section includes:</p>
+<ul class="simple">
+<li><p><strong>Task Description</strong>
+A detailed explanation of each task, including its objectives, scope, and real-world relevance to financial regulations.
+This section provides background information on the regulatory challenge the task addresses.</p></li>
+<li><p><strong>Dataset</strong>
+Detailed information on the sources, formats, and scope of the regulatory texts,
+including any relevant annotations or metadata.</p></li>
+<li><p><strong>Metrics</strong>
+Instructions and best practices for evaluation, covering key performance
+measures relevant to financial regulation—such as accuracy, BertScore,
+FactScore, and more.</p></li>
+</ul>
+<p>We encourage researchers, industry professionals, and students to explore
+these resources, adapt them for innovative projects, and contribute to a more
+efficient, trustworthy, and adaptive landscape in financial compliance.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Regulations Challenge Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Financial Regulations Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="workflow.html" class="btn btn-neutral float-right" title="Workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
