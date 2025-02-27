@@ -91,7 +91,7 @@ It includes:
 
 **Data Usage**
 --------------------
-Participants can:
+Users can:
 
 - Use the provided dataset to fine-tune or evaluate their **LLMs**.
 - Supplement the dataset with additional regulatory materials for improved model performance.

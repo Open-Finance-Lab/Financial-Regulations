@@ -129,7 +129,7 @@ The dataset covers real-world and simulated licensing scenarios under MOF:
 
 Data Usage
 ----------
-Participants can:
+Users can:
 
 - Fine-tune or evaluate LLMs using this dataset.
 - Combine OSI references and MOF documentation for improved factual accuracy.
