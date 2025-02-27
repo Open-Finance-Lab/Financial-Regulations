@@ -32,19 +32,23 @@ Each input consists of:
 The expected output is a concise, well-structured answer to the given prompt, based 
 on accurate retrieval and interpretation of CDM documentation.
 
-**Example Input-Output**
+Example Input-Output
 --------------------
-**Input:**  
+
+**Input**  
+::
 
     "Provide a concise answer to the following question related to the Financial Industry Operating Network’s (FINO) Common Domain Model (CDM): 
     What are the key components of a CDM product model?"
 
-**Expected Output:**  
+**Expected Output**  
+::
 
     "The CDM product model consists of a standardized representation of financial 
     products, including their attributes, lifecycle events, and contractual agreements. 
     It provides a unified schema for derivatives, securities, and lending transactions 
     to ensure interoperability and automation in financial systems."
+
 
 Dataset
 ====================
@@ -116,6 +120,27 @@ metric designed to measure the precision of model-generated responses.
 
 By using FActScore, this task ensures that LLMs are assessed not just on fluency, 
 but also on their ability to accurately reflect regulatory guidelines and CDM principles.
+
+Baseline Performance
+--------------------
+Below are FActScore results for three baseline models on the CDM dataset:
+
+.. list-table::
+   :widths: 40 40
+   :header-rows: 1
+
+   * - **Baseline Model**
+     - **FActScore**
+   * - Llama 3.1-8B
+     - 0.7980
+   * - GPT-4o
+     - 0.8820
+   * - Mistral Large 2
+     - 0.8632
+
+As shown, GPT-4o achieved the highest FActScore among the baselines, followed by 
+Mistral Large 2 and Llama 3.1-8B. These metrics serve as reference points for 
+teams aiming to improve factual accuracy in responses to CDM-related queries.
 
 **Reference**
 --------------------

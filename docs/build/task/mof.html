@@ -18,6 +18,8 @@
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -53,9 +55,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="cdm.html">Common Domain Model (CDM)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Model Openness Framework (MOF)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#task-description">Task Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-description">Task Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subtasks">Subtasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-format">Input Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-format">Output Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-input-output">Example Input-Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-usage">Data Usage</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#metrics">Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="xbrl.html">eXtensible Business Rreporting Language (XBRL)</a></li>
@@ -89,12 +101,200 @@
 <h1>Model Openness Framework (MOF)<a class="headerlink" href="#model-openness-framework-mof" title="Link to this heading"></a></h1>
 <section id="task-description">
 <h2>Task Description<a class="headerlink" href="#task-description" title="Link to this heading"></a></h2>
+<p>The Model Openness Framework (MOF) is a comprehensive system for evaluating
+and classifying the completeness and openness of machine learning models,
+with a strong focus on licensing requirements. By defining 17 distinct
+components across a model’s lifecycle, MOF promotes transparency, reproducibility,
+and responsibility in open-source machine learning. Each MOF component has
+specific licensing criteria to ensure that contributors uphold intellectual
+property rights while enabling open collaboration.</p>
+<p>In this task, we test the ability of large language models (LLMs) to
+accurately answer licensing-related questions under MOF. The task comprises
+three subtasks:</p>
+<section id="subtasks">
+<h3>Subtasks<a class="headerlink" href="#subtasks" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>License Abbreviations</strong>
+- Expand or interpret short license abbreviations.</p></li>
+<li><p><strong>License OSI Approval</strong>
+- Determine whether a given license is approved by the Open Source Initiative (OSI) or not.</p></li>
+<li><p><strong>Question Answering</strong>
+- Provide detailed answers about licensing requirements in MOF.</p></li>
+</ol>
+</section>
+<section id="input-format">
+<h3>Input Format<a class="headerlink" href="#input-format" title="Link to this heading"></a></h3>
+<p>Each subtask will present a primary request in the form of:</p>
+<ul class="simple">
+<li><p><strong>Primary Request</strong>:
+A concise query about licensing in MOF, such as:</p>
+<ul>
+<li><p><em>“Expand the following MOF-related abbreviation into its full form: AFL-3.0”</em></p></li>
+<li><p><em>“Is the Microsoft Shared Source License OSI-approved?”</em></p></li>
+<li><p><em>“What type of license is the Apache License, Version 2.0?”</em></p></li>
+</ul>
+</li>
+<li><p><strong>Content</strong>:
+If necessary, relevant reference text (e.g., snippets from the OSI website, MOF documentation).
+However, many prompts may not include separate content if the request is self-contained.</p></li>
+</ul>
+</section>
+<section id="output-format">
+<h3>Output Format<a class="headerlink" href="#output-format" title="Link to this heading"></a></h3>
+<p>The model should output:</p>
+<ul class="simple">
+<li><p><strong>Concise Answer</strong>:
+A short, direct response that addresses the primary request.</p></li>
+<li><p><strong>Optional Explanation</strong> (for Q&amp;A subtask):
+An additional sentence or two that justifies the answer, referencing MOF or OSI guidelines if needed.</p></li>
+</ul>
+</section>
+<section id="example-input-output">
+<h3>Example Input-Output<a class="headerlink" href="#example-input-output" title="Link to this heading"></a></h3>
+<p><strong>Subtask 1: License Abbreviations</strong></p>
+<p><strong>Input</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Expand the abbreviation: BSD-3-Clause&quot;</span>
+</pre></div>
+</div>
+<p><strong>Expected Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;BSD 3-Clause License&quot;</span>
+</pre></div>
+</div>
+<p><strong>Subtask 2: License OSI Approval</strong></p>
+<p><strong>Input</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Is the Apache License 2.0 OSI-approved?&quot;</span>
+</pre></div>
+</div>
+<p><strong>Expected Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Yes&quot;</span>
+</pre></div>
+</div>
+<p><strong>Subtask 3: Question Answering</strong></p>
+<p><strong>Input</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Which licenses are recommended for model parameters under the Model Openness Framework?&quot;</span>
+</pre></div>
+</div>
+<p><strong>Expected Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;MOF recommends OSI-approved licenses (e.g., MIT License or Apache License 2.0)</span>
+<span class="k">for</span> <span class="n">model</span> <span class="n">parameters</span> <span class="n">to</span> <span class="n">ensure</span> <span class="n">community</span> <span class="n">collaboration</span> <span class="ow">and</span> <span class="n">openness</span><span class="o">.</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="dataset">
 <h2>Dataset<a class="headerlink" href="#dataset" title="Link to this heading"></a></h2>
+<p>The dataset covers real-world and simulated licensing scenarios under MOF:</p>
+<ul class="simple">
+<li><p><strong>License Abbreviations</strong> (41 items)
+Expand or interpret short license labels (e.g.,AAL ).</p></li>
+<li><p><strong>License OSI Approval</strong> (50 items)
+Determine whether each license is officially approved by the Open Source Initiative.</p></li>
+<li><p><strong>Question Answering</strong> (70 items)
+Answer more in-depth questions about licensing requirements for specific MOF components
+(e.g., model parameters, datasets, or source code).</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Data</strong></p></th>
+<th class="head"><p><strong>Size</strong></p></th>
+<th class="head"><p><strong>Data Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>License Abbreviations</p></td>
+<td><p>41</p></td>
+<td><p>OSI website</p></td>
+</tr>
+<tr class="row-odd"><td><p>License OSI Approval</p></td>
+<td><p>50</p></td>
+<td><p>OSI website</p></td>
+</tr>
+<tr class="row-even"><td><p>Question Answering</p></td>
+<td><p>70</p></td>
+<td><p>OSI website, MOF docs</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Total</strong></p></td>
+<td><p><strong>161</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="data-usage">
+<h3>Data Usage<a class="headerlink" href="#data-usage" title="Link to this heading"></a></h3>
+<p>Participants can:</p>
+<ul class="simple">
+<li><p>Fine-tune or evaluate LLMs using this dataset.</p></li>
+<li><p>Combine OSI references and MOF documentation for improved factual accuracy.</p></li>
+<li><p>Enhance the model’s capability to address specialized licensing questions by including additional open-source knowledge bases, if desired.</p></li>
+</ul>
+</section>
 </section>
 <section id="metrics">
 <h2>Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h2>
+<p>Two metrics are used to evaluate performance:</p>
+<ol class="arabic">
+<li><p><strong>Accuracy</strong>
+For the <strong>License Abbreviations</strong> and <strong>License OSI Approval</strong> subtasks, the model’s output is compared to a ground-truth label.
+Accuracy is computed as:</p>
+<div class="math notranslate nohighlight">
+\[\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}\]</div>
+</li>
+<li><p><strong>FActScore</strong><sup>[1]</sup>
+For the <strong>Question Answering</strong> subtask, FActScore measures factual precision.
+A higher FActScore indicates that the model’s answers align more closely with MOF guidelines
+and reference materials, while a lower score suggests factual inaccuracy.</p></li>
+</ol>
+<p>Below are evaluation results for three baseline models across the three subtasks in MOF Licenses.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27.3%" />
+<col style="width: 18.2%" />
+<col style="width: 18.2%" />
+<col style="width: 18.2%" />
+<col style="width: 18.2%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Baseline Model</strong></p></th>
+<th class="head"><p><strong>Average Score</strong></p></th>
+<th class="head"><p><strong>License Abbreviations (Accuracy)</strong></p></th>
+<th class="head"><p><strong>License OSI Approval (Accuracy)</strong></p></th>
+<th class="head"><p><strong>Detailed QA (FActScore)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Llama 3.1-8B</p></td>
+<td><p>0.5149</p></td>
+<td><p>0.1290</p></td>
+<td><p>0.7200</p></td>
+<td><p>0.6956</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPT-4o</p></td>
+<td><p>0.6564</p></td>
+<td><p>0.1935</p></td>
+<td><p>0.9600</p></td>
+<td><p>0.8156</p></td>
+</tr>
+<tr class="row-even"><td><p>Mistral Large 2</p></td>
+<td><p>0.4640</p></td>
+<td><p>0.1290</p></td>
+<td><p>0.4400</p></td>
+<td><p>0.8229</p></td>
+</tr>
+</tbody>
+</table>
+<p>These baseline results serve as benchmarks for evaluating new model submissions on the MOF Licenses task.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<p>[1] Sewon Min et al. (2023). <em>FactScore: Fine-grained atomic evaluation of factual precision in
+long-form text generation.</em> arXiv preprint arXiv:2305.14251.
+Available at: <a class="reference external" href="https://arxiv.org/abs/2305.14251">https://arxiv.org/abs/2305.14251</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For additional details on MOF’s 17 components and specific licensing criteria, see
+White et al. (2024), <em>Model Openness Framework (MOF)</em>, as cited in competition
+documentation or <a class="reference external" href="https://arxiv.org/abs/2403.13784">MOF official docs</a>.</p>
+</div>
 </section>
 </section>
 

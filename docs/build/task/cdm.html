@@ -55,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#task-description">Task Description</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#input-format"><strong>Input Format</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#output-format"><strong>Output Format</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-input-output"><strong>Example Input-Output</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-input-output">Example Input-Output</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a><ul>
@@ -66,6 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#metrics">Metrics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#factscore-evaluation-process"><strong>FActScore Evaluation Process</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#metric-interpretation"><strong>Metric Interpretation</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baseline-performance">Baseline Performance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reference"><strong>Reference</strong></a></li>
 </ul>
 </li>
@@ -132,19 +133,19 @@ structure, use cases, and implementation. Specifically, the task challenges LLMs
 on accurate retrieval and interpretation of CDM documentation.</p>
 </section>
 <section id="example-input-output">
-<h3><strong>Example Input-Output</strong><a class="headerlink" href="#example-input-output" title="Link to this heading"></a></h3>
-<p><strong>Input:</strong></p>
-<blockquote>
-<div><p>“Provide a concise answer to the following question related to the Financial Industry Operating Network’s (FINO) Common Domain Model (CDM):
-What are the key components of a CDM product model?”</p>
-</div></blockquote>
-<p><strong>Expected Output:</strong></p>
-<blockquote>
-<div><p>“The CDM product model consists of a standardized representation of financial
-products, including their attributes, lifecycle events, and contractual agreements.
-It provides a unified schema for derivatives, securities, and lending transactions
-to ensure interoperability and automation in financial systems.”</p>
-</div></blockquote>
+<h3>Example Input-Output<a class="headerlink" href="#example-input-output" title="Link to this heading"></a></h3>
+<p><strong>Input</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;Provide a concise answer to the following question related to the Financial Industry Operating Network’s (FINO) Common Domain Model (CDM):
+What are the key components of a CDM product model?&quot;
+</pre></div>
+</div>
+<p><strong>Expected Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;The CDM product model consists of a standardized representation of financial</span>
+<span class="n">products</span><span class="p">,</span> <span class="n">including</span> <span class="n">their</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">lifecycle</span> <span class="n">events</span><span class="p">,</span> <span class="ow">and</span> <span class="n">contractual</span> <span class="n">agreements</span><span class="o">.</span>
+<span class="n">It</span> <span class="n">provides</span> <span class="n">a</span> <span class="n">unified</span> <span class="n">schema</span> <span class="k">for</span> <span class="n">derivatives</span><span class="p">,</span> <span class="n">securities</span><span class="p">,</span> <span class="ow">and</span> <span class="n">lending</span> <span class="n">transactions</span>
+<span class="n">to</span> <span class="n">ensure</span> <span class="n">interoperability</span> <span class="ow">and</span> <span class="n">automation</span> <span class="ow">in</span> <span class="n">financial</span> <span class="n">systems</span><span class="o">.</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="dataset">
@@ -234,6 +235,35 @@ metric designed to measure the precision of model-generated responses.</p>
 </ul>
 <p>By using FActScore, this task ensures that LLMs are assessed not just on fluency,
 but also on their ability to accurately reflect regulatory guidelines and CDM principles.</p>
+</section>
+<section id="baseline-performance">
+<h3>Baseline Performance<a class="headerlink" href="#baseline-performance" title="Link to this heading"></a></h3>
+<p>Below are FActScore results for three baseline models on the CDM dataset:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Baseline Model</strong></p></th>
+<th class="head"><p><strong>FActScore</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Llama 3.1-8B</p></td>
+<td><p>0.7980</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPT-4o</p></td>
+<td><p>0.8820</p></td>
+</tr>
+<tr class="row-even"><td><p>Mistral Large 2</p></td>
+<td><p>0.8632</p></td>
+</tr>
+</tbody>
+</table>
+<p>As shown, GPT-4o achieved the highest FActScore among the baselines, followed by
+Mistral Large 2 and Llama 3.1-8B. These metrics serve as reference points for
+teams aiming to improve factual accuracy in responses to CDM-related queries.</p>
 </section>
 <section id="reference">
 <h3><strong>Reference</strong><a class="headerlink" href="#reference" title="Link to this heading"></a></h3>

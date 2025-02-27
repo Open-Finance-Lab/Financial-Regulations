@@ -33,7 +33,7 @@ including:
    featuring nine tasks aimed at pushing the limits of LLMs in interpreting
    and applying financial regulations.
 
-2. A follow-up competition focusing on three core areas:
+2. The `Finrl Contest 2025 <https://open-finance-lab.github.io/FinRL_Contest_2025/>`_, focusing on three core areas:
 
    - Common Domain Model (CDM)
    - Model Openness Framework (MOF)
