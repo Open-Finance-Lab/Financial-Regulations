@@ -52,9 +52,23 @@
 <p class="caption" role="heading"><span class="caption-text">Tasks and Datasets</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Common Domain Model (CDM)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#task-description">Task Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#metrics">Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task-description">Task Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#input-format"><strong>Input Format</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-format"><strong>Output Format</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-input-output"><strong>Example Input-Output</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset-composition"><strong>Dataset Composition</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-usage"><strong>Data Usage</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#metrics">Metrics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#factscore-evaluation-process"><strong>FActScore Evaluation Process</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metric-interpretation"><strong>Metric Interpretation</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference"><strong>Reference</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mof.html">Model Openness Framework (MOF)</a></li>
@@ -89,12 +103,143 @@
 <h1>Common Domain Model (CDM)<a class="headerlink" href="#common-domain-model-cdm" title="Link to this heading"></a></h1>
 <section id="task-description">
 <h2>Task Description<a class="headerlink" href="#task-description" title="Link to this heading"></a></h2>
+<p>The Common Domain Model (CDM) is a standardized, machine-readable, and
+machine-executable data and process model for financial products, transactions,
+and lifecycle events. Developed in collaboration with the International Capital
+Market Association (ICMA), the International Swaps and Derivatives Association (ISDA),
+and the International Securities Lending Association (ISLA), CDM is maintained within
+the Fintech Open Source Foundation (FINOS). Its goal is to enhance interoperability,
+streamline transaction processing, and improve regulatory oversight.</p>
+<p>This task evaluates the capability of large language models (LLMs) to accurately
+interpret and respond to questions related to the CDM framework, covering its
+structure, use cases, and implementation. Specifically, the task challenges LLMs to:</p>
+<ul class="simple">
+<li><p>Understand key CDM concepts, including trade events, product models, process models, and legal agreements.</p></li>
+<li><p>Retrieve and generate precise responses based on CDM documentation and FAQs.</p></li>
+<li><p>Assist in CDM implementation and deployment by addressing technical inquiries.</p></li>
+</ul>
+<section id="input-format">
+<h3><strong>Input Format</strong><a class="headerlink" href="#input-format" title="Link to this heading"></a></h3>
+<p>Each input consists of:</p>
+<ul class="simple">
+<li><p><strong>Primary Request</strong>: A specific question related to CDM, requiring the model to extract relevant information.</p></li>
+<li><p><strong>Content</strong>: The regulatory or documentation-based data that the model needs to act upon.</p></li>
+</ul>
+</section>
+<section id="output-format">
+<h3><strong>Output Format</strong><a class="headerlink" href="#output-format" title="Link to this heading"></a></h3>
+<p>The expected output is a concise, well-structured answer to the given prompt, based
+on accurate retrieval and interpretation of CDM documentation.</p>
+</section>
+<section id="example-input-output">
+<h3><strong>Example Input-Output</strong><a class="headerlink" href="#example-input-output" title="Link to this heading"></a></h3>
+<p><strong>Input:</strong></p>
+<blockquote>
+<div><p>“Provide a concise answer to the following question related to the Financial Industry Operating Network’s (FINO) Common Domain Model (CDM):
+What are the key components of a CDM product model?”</p>
+</div></blockquote>
+<p><strong>Expected Output:</strong></p>
+<blockquote>
+<div><p>“The CDM product model consists of a standardized representation of financial
+products, including their attributes, lifecycle events, and contractual agreements.
+It provides a unified schema for derivatives, securities, and lending transactions
+to ensure interoperability and automation in financial systems.”</p>
+</div></blockquote>
+</section>
 </section>
 <section id="dataset">
 <h2>Dataset<a class="headerlink" href="#dataset" title="Link to this heading"></a></h2>
+<p>The dataset is designed to test how well LLMs understand and apply CDM-related knowledge.
+It includes:</p>
+<ul class="simple">
+<li><p>A curated collection of questions and answers derived from CDM documentation.</p></li>
+<li><p>A diverse range of topics covering product models, event models, legal agreements, and process models.</p></li>
+<li><p>A focus on basic CDM concepts, implementation guidelines, and practical deployment issues.</p></li>
+</ul>
+<section id="dataset-composition">
+<h3><strong>Dataset Composition</strong><a class="headerlink" href="#dataset-composition" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Data Category</strong></p></th>
+<th class="head"><p><strong>Size</strong></p></th>
+<th class="head"><p><strong>Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Product Model</p></td>
+<td><p>20</p></td>
+<td><p>CDM Documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Event Model</p></td>
+<td><p>20</p></td>
+<td><p>CDM Documentation</p></td>
+</tr>
+<tr class="row-even"><td><p>Legal Agreements</p></td>
+<td><p>12</p></td>
+<td><p>CDM Documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Process Model</p></td>
+<td><p>19</p></td>
+<td><p>CDM Documentation</p></td>
+</tr>
+<tr class="row-even"><td><p>General and Other</p></td>
+<td><p>9</p></td>
+<td><p>CDM Documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Implementation &amp; Deployment</p></td>
+<td><p>46</p></td>
+<td><p>FAQs, FINOS CDM organizers, CDM Documentation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Total</strong></p></td>
+<td><p><strong>126</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-usage">
+<h3><strong>Data Usage</strong><a class="headerlink" href="#data-usage" title="Link to this heading"></a></h3>
+<p>Participants can:</p>
+<ul class="simple">
+<li><p>Use the provided dataset to fine-tune or evaluate their <strong>LLMs</strong>.</p></li>
+<li><p>Supplement the dataset with additional regulatory materials for improved model performance.</p></li>
+</ul>
+</section>
 </section>
 <section id="metrics">
 <h2>Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h2>
+<p>The performance of LLMs on the CDM task is evaluated using <strong>FActScore</strong><sup>[1]</sup>, a factual accuracy
+metric designed to measure the precision of model-generated responses.</p>
+<section id="factscore-evaluation-process">
+<h3><strong>FActScore Evaluation Process</strong><a class="headerlink" href="#factscore-evaluation-process" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Atomic Fact Extraction</strong>: The model’s generated response is decomposed into atomic facts—short statements that contain single pieces of information.</p></li>
+<li><p><strong>Validation Against Knowledge Source</strong>: Each atomic fact is assessed against CDM documentation to determine its correctness.</p></li>
+<li><p><strong>Evaluation Methods</strong>:</p>
+<ul class="simple">
+<li><p>No-context LM: Evaluates the model’s response without additional retrieval.</p></li>
+<li><p>Retrieve → LM: Uses retrieval-augmented generation to enhance response accuracy.</p></li>
+<li><p>Nonparametric Probability (NP): Assigns probabilities to each fact’s correctness.</p></li>
+<li><p>Retrieve → LM + NP: Combines retrieval and probability-based validation.</p></li>
+</ul>
+</li>
+<li><p><strong>Final Score Calculation</strong>: The FActScore is computed as the average factual accuracy across all responses.</p></li>
+</ol>
+</section>
+<section id="metric-interpretation">
+<h3><strong>Metric Interpretation</strong><a class="headerlink" href="#metric-interpretation" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>High FActScore: The model provides factually precise and well-supported responses.</p></li>
+<li><p>Low FActScore: The model generates factually incorrect or unsupported claims, indicating poor regulatory comprehension.</p></li>
+</ul>
+<p>By using FActScore, this task ensures that LLMs are assessed not just on fluency,
+but also on their ability to accurately reflect regulatory guidelines and CDM principles.</p>
+</section>
+<section id="reference">
+<h3><strong>Reference</strong><a class="headerlink" href="#reference" title="Link to this heading"></a></h3>
+<p>[1] Sewon Min et al. (2023). <em>FactScore: Fine-grained atomic evaluation of factual precision in long-form text generation.</em> arXiv preprint arXiv:2305.14251.
+Available at: <a class="reference external" href="https://arxiv.org/abs/2305.14251">https://arxiv.org/abs/2305.14251</a></p>
+</section>
 </section>
 </section>
 
