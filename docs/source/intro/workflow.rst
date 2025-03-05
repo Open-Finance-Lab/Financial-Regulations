@@ -6,7 +6,8 @@ In order to encourage the community to develop LLMs that effectively handle mult
 1. **Use scenarios**: We begin with the use scenarios that reflect professional financial regulatory activities including but not limited to 
    legal research, validation, and compliance. 
 2. **Design tasks**: By decomposing the above use scenarios, we divide them into capabilities and define corresponding tasks. In this stage, 
-   there are nine novel tasks:   
+   there are nine novel tasks:
+
    - Basic Capabilities
       - Abbreviation Recognition
       - Definition Recognition
