@@ -20,7 +20,7 @@ In order to encourage the community to develop LLMs that effectively handle mult
    - XBRL Filings
 3. **Identify Failure Patterns**: After we evaluate LLMs, we will identify failure patterns.
 4. **Expand Testing Datasets**: The above failure patterns instruct the expansion of testing sets: including questions for observed weaknesses. 
-   We create testing questions from multimodal data collected from various data sources, such as legal texts, con- tracts, and financial 
+   We create testing questions from multimodal data collected from various data sources, such as legal texts, contracts, and financial 
    statements.
 5. **Enhance Tasks**: The newly expanded question sets are integrated into the tasks. We will also integrate the new tasks and question sets into the Open FinLLM Leaderboard.
 
