@@ -8,11 +8,17 @@ In order to encourage the community to develop LLMs that effectively handle mult
 2. **Design tasks** By decomposing the above use scenarios, we divide them into capabilities and define corresponding tasks. In this stage, 
    there are nine novel tasks:   
 
-   - basic capabilities (five)
-   - passing certificates 
-   - understanding the Common Domain Model (CDM),
-   - understanding the Model Openness Framework (MOF)
-   - XBRL filings
+   - Basic Capabilities (five):
+
+      - Abbreviation Recognition
+      - Definition Recognition
+      - Named Entity Recognition (NER)
+      - Question Answering
+      - Link Retrieval
+   - Passing Certificates 
+   - Understanding the Common Domain Model (CDM)
+   - Understanding the Model Openness Framework (MOF)
+   - XBRL Filings
 3. **Identify failure patterns** After we evaluate LLMs, we will identify failure patterns.
 4. **Expand testing datasets** The above failure patterns instruct the expansion of testing sets: including questions for observed weaknesses. 
    We create testing questions from multimodal data collected from various data sources, such as legal texts, con- tracts, and financial 
