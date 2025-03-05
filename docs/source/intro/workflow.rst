@@ -8,8 +8,7 @@ In order to encourage the community to develop LLMs that effectively handle mult
 2. **Design tasks** By decomposing the above use scenarios, we divide them into capabilities and define corresponding tasks. In this stage, 
    there are nine novel tasks:   
 
-   - Basic Capabilities (five):
-
+   - Basic Capabilities:
       - Abbreviation Recognition
       - Definition Recognition
       - Named Entity Recognition (NER)
