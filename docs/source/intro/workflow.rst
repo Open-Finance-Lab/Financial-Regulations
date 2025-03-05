@@ -7,6 +7,7 @@ In order to encourage the community to develop LLMs that effectively handle mult
    legal research, validation, and compliance. 
 2. **Design tasks** By decomposing the above use scenarios, we divide them into capabilities and define corresponding tasks. In this stage, 
    there are nine novel tasks:   
+
    - basic capabilities (five)
    - passing certificates 
    - understanding the Common Domain Model (CDM),
