@@ -9,6 +9,35 @@ In this task, we assess the ability of LLMs to retrieve and interpret eXtensible
 Companies need to provide accurate and standardized financial information to stakeholders, including investors, regulators, and auditors. XBRL is a globally recognized standard for electronic communication of business and financial data. Using XBRL will help ensure consistency and comparability across different companies and jurisdictions. Using LLMs to retrieve and process financial data in XBRL format is an important application in financial regulation.
 
 
+**Example Input and Output:**
+--------------------
+
+**XBRL Term**
+--------------------
+Q: What does the term 'abstract' mean in the context of the XBRL standard? Please provide a detailed explanation of this term.
+
+A: An attribute of an element to indicate that the element is only used in a hierarchy to group related elements together. An abstract element cannot be used to tag data in an instance document.
+
+**Domain Query to XBRL Reports**
+--------------------
+Q: Among operations, investing, and financing activities, which brought in the most net (or lowest net) cash flow for Nike in FY2023?
+
+A: Among the three, cash flow from operations was the highest for Nike in FY2023.
+
+
+**Financial Math**
+--------------------
+Q: A project expects annual cash inflows of $6,000 over 7 years. If the discount rate is 8%, what is the Net Present Value (NPV) of the project?
+
+A: 21462.58
+
+**Numeric Query to XBRL Reports**
+--------------------
+Q: What is the FY2015 unadjusted EBITDA margin for Netflix? Calculate unadjusted EBITDA using unadjusted operating income and D&A.
+
+A: 0.054
+
+
 Dataset
 ====================
 The XBRL benchmark dataset is used to evaluate the ability of LLMs to interpret the XBRL standards, retrieve data in XBRL filings, and answer financial math questions. This benchmark dataset comprises XBRL terms, domain queries to XBRL reports, numeric queries to XBRL reports, tag queries to XBRL reports, financial math questions, and financial ratio formula with XBRL tags.
