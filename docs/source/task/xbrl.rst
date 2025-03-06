@@ -15,7 +15,7 @@ The XBRL benchmark dataset is used to evaluate the ability of LLMs to interpret 
 
 The questions for XBRL terms is to evaluate LLMs’ ability to explain an XBRL term. Domain queries are questions about different domains, such as products and services, in XBRL reports. Numeric queries are questions asking LLMs to retrieve specific data from XBRL reports. Tag queries are questions asking LLMs to retrieve corresponding tags for an item from XBRL reports. Financial math questions asking LLMs to return the result of the given math problem. Financial ratio formula questions ask LLMs to return the calculation formula with corresponding tags for a given financial ratio.
 
-## 2.1 Data statistics
+## Data statistics
 
 .. list-table::
    :header-rows: 1
@@ -53,6 +53,7 @@ The questions for XBRL terms is to evaluate LLMs’ ability to explain an XBRL t
      - 
      - 
 
+Users can fine-tune or evaluate LLMs using this dataset, call additional tools, using additional open-source. 
 
 Metrics
 ====================
@@ -93,3 +94,9 @@ We use accuracy for financial math questions, numeric queries to XBRL reports, t
      - 0.8667
      - 0.7791
 
+Reference
+====================
+[1] Sewon Min et al. (2023). FactScore: Fine-grained atomic evaluation of factual precision in long-form text generation. arXiv preprint arXiv:2305.14251. Available at: https://arxiv.org/abs/2305.14251
+
+Shijie Han, et al. XBRL-Agent: Leveraging Large Language Models for Financial Report Analysis. Proceedings of the Conference ICAIF '24: Proceedings of the 5th ACM International Conference on AI in Finance
+https://doi.org/10.1145/3677052.3698614.
