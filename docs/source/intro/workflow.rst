@@ -24,4 +24,17 @@ In order to encourage the community to develop LLMs that effectively handle mult
    statements.
 5. **Enhance Tasks**: The newly expanded question sets are integrated into the tasks. We will also integrate the new tasks and question sets into the Open FinLLM Leaderboard.
 
+Curation Workflow
+=================
+
+The following figure illustrates the curation flow for our testing sets:
+
+.. figure:: images/overview_method.png
+   :alt: Curation Workflow Diagram
+   :align: center
+   :width: 80%
+
+   The curation workflow for financial regulatory task and dataset expansion.
+
+
 This workflow operates as a continuous improvement loop, ensuring that tasks and test sets remain relevant, challenging, and aligned with real-world financial applications.

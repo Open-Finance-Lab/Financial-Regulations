@@ -12,6 +12,13 @@ and responsibility in open-source machine learning. Each MOF component has
 specific licensing criteria to ensure that contributors uphold intellectual
 property rights while enabling open collaboration.
 
+.. figure:: images/2024-Model-Openess-Framework_v1-15M-2.avif
+   :alt: MOF Components
+   :align: center
+   :width: 80%
+
+   MOF Components
+
 In this task, we test the ability of large language models (LLMs) to
 accurately answer licensing-related questions under MOF. The task comprises
 three subtasks:
@@ -129,7 +136,7 @@ The dataset covers real-world and simulated licensing scenarios under MOF:
 
 Data Usage
 ----------
-Participants can:
+Users can:
 
 - Fine-tune or evaluate LLMs using this dataset.
 - Combine OSI references and MOF documentation for improved factual accuracy.
@@ -180,6 +187,7 @@ Below are evaluation results for three baseline models across the three subtasks
      - 0.8229
 
 These baseline results serve as benchmarks for evaluating new model submissions on the MOF Licenses task.
+
 
 
 

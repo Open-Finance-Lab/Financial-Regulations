@@ -37,9 +37,15 @@ Q: What is the FY2015 unadjusted EBITDA margin for Netflix? Calculate unadjusted
 
 A: 0.054
 
-.. image:: /docs/source/datasets.png
-   :alt: Example
-   :width: 600px
+Below are examples of XBRL-related questions:
+
+.. figure:: images/datasets.png
+   :alt: XBRL Example
+   :align: center
+   :width: 80%
+
+   XBRL Example
+
 
 
 Dataset
@@ -48,7 +54,8 @@ The XBRL benchmark dataset is used to evaluate the ability of LLMs to interpret 
 
 The questions for XBRL terms is to evaluate LLMs’ ability to explain an XBRL term. Domain queries are questions about different domains, such as products and services, in XBRL reports. Numeric queries are questions asking LLMs to retrieve specific data from XBRL reports. Tag queries are questions asking LLMs to retrieve corresponding tags for an item from XBRL reports. Financial math questions asking LLMs to return the result of the given math problem. Financial ratio formula questions ask LLMs to return the calculation formula with corresponding tags for a given financial ratio.
 
-## Data statistics
+Data statistics
+----------
 
 .. list-table::
    :header-rows: 1
@@ -66,7 +73,7 @@ The questions for XBRL terms is to evaluate LLMs’ ability to explain an XBRL t
      - Selectively provided
      - `XBRL Reports in FinanceBench`
    * - Financial Math
-     - 1000
+     - 90
      - Not provided
      - `ChatGPT for formulas and code, verified by a human`
    * - Numeric Query to XBRL Reports
@@ -77,12 +84,8 @@ The questions for XBRL terms is to evaluate LLMs’ ability to explain an XBRL t
      - 50
      - Selectively provided
      - `XBRL Reports of Companies in Dow Jones 30 from the SEC`
-   * - Financial Ratio Formula with XBRL Tags
-     - 50
-     - Selectively provided
-     - `XBRL Reports of Companies in Dow Jones 30 from the SEC`
    * - **Total**
-     - **1700**
+     - **790**
      - 
      - 
 
@@ -93,7 +96,8 @@ Metrics
 
 We use accuracy for financial math questions, numeric queries to XBRL reports, tag queries to XBRL reports, and financial ratio formulas. We use FActScore for XBRL terms and domain queries to XBRL reports.
 
-##Baseline Performance
+Baseline Performance
+----------
 
 .. list-table::
    :header-rows: 1

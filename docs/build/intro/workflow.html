@@ -15,7 +15,7 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -47,13 +47,16 @@
               <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#curation-workflow">Curation Workflow</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tasks and Datasets</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../task/cdm.html">Common Domain Model (CDM)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../task/mof.html">Model Openness Framework (MOF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../task/xbrl.html">eXtensible Business Rreporting Language (XBRL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../task/xbrl.html">eXtensible Business Reporting Language (XBRL)</a></li>
 </ul>
 
         </div>
@@ -82,6 +85,48 @@
              
   <section id="workflow">
 <h1>Workflow<a class="headerlink" href="#workflow" title="Link to this heading"></a></h1>
+<p>In order to encourage the community to develop LLMs that effectively handle multimodal data and tackle the issues of hallucinations and information, participants will follow this structured workflow:</p>
+<ol class="arabic simple">
+<li><p><strong>Use Scenarios</strong>: We begin with the use scenarios that reflect professional financial regulatory activities including but not limited to
+legal research, validation, and compliance.</p></li>
+<li><p><strong>Design Tasks</strong>: By decomposing the above use scenarios, we divide them into capabilities and define corresponding tasks. In this stage,
+there are nine novel tasks:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Basic Capabilities</dt><dd><ul>
+<li><p>Abbreviation Recognition</p></li>
+<li><p>Definition Recognition</p></li>
+<li><p>Named Entity Recognition (NER)</p></li>
+<li><p>Question Answering</p></li>
+<li><p>Link Retrieval</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Passing Certificates</p></li>
+<li><p>Understanding the Common Domain Model (CDM)</p></li>
+<li><p>Understanding the Model Openness Framework (MOF)</p></li>
+<li><p>XBRL Filings</p></li>
+</ul>
+</li>
+<li><p><strong>Identify Failure Patterns</strong>: After we evaluate LLMs, we will identify failure patterns.</p></li>
+<li><p><strong>Expand Testing Datasets</strong>: The above failure patterns instruct the expansion of testing sets: including questions for observed weaknesses.
+We create testing questions from multimodal data collected from various data sources, such as legal texts, contracts, and financial
+statements.</p></li>
+<li><p><strong>Enhance Tasks</strong>: The newly expanded question sets are integrated into the tasks. We will also integrate the new tasks and question sets into the Open FinLLM Leaderboard.</p></li>
+</ol>
+<section id="curation-workflow">
+<h2>Curation Workflow<a class="headerlink" href="#curation-workflow" title="Link to this heading"></a></h2>
+<p>The following figure illustrates the curation flow for our testing sets:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/overview_method.png"><img alt="Curation Workflow Diagram" src="../_images/overview_method.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The curation workflow for financial regulatory task and dataset expansion.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>This workflow operates as a continuous improvement loop, ensuring that tasks and test sets remain relevant, challenging, and aligned with real-world financial applications.</p>
+</section>
 </section>
 
 
