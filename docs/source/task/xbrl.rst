@@ -37,6 +37,10 @@ Q: What is the FY2015 unadjusted EBITDA margin for Netflix? Calculate unadjusted
 
 A: 0.054
 
+.. image:: /docs/source/datasets.png
+   :alt: Example
+   :width: 600px
+
 
 Dataset
 ====================
