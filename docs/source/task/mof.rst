@@ -12,7 +12,7 @@ and responsibility in open-source machine learning. Each MOF component has
 specific licensing criteria to ensure that contributors uphold intellectual
 property rights while enabling open collaboration.
 
-.. figure:: images/2024-Model-Openess-Framework_v1-15M-2.avif
+.. figure:: ../_static/2024-Model-Openess-Framework_v1-15M-2.avif
    :alt: MOF Components
    :align: center
    :width: 80%
