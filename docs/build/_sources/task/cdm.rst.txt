@@ -60,7 +60,7 @@ It includes:
 - A focus on basic CDM concepts, implementation guidelines, and practical deployment issues.
 
 **Dataset Composition**
---------------------
+---------------------------
 .. list-table::
    :header-rows: 1
 
@@ -102,7 +102,7 @@ The performance of LLMs on the CDM task is evaluated using **FActScore**\ :sup:`
 metric designed to measure the precision of model-generated responses.
 
 **FActScore Evaluation Process**
---------------------
+----------------------------------------
 1. **Atomic Fact Extraction**: The model’s generated response is decomposed into atomic facts—short statements that contain single pieces of information.
 2. **Validation Against Knowledge Source**: Each atomic fact is assessed against CDM documentation to determine its correctness.
 3. **Evaluation Methods**:
@@ -114,7 +114,7 @@ metric designed to measure the precision of model-generated responses.
 4. **Final Score Calculation**: The FActScore is computed as the average factual accuracy across all responses.
 
 **Metric Interpretation**
---------------------
+------------------------------------
 - High FActScore: The model provides factually precise and well-supported responses.
 - Low FActScore: The model generates factually incorrect or unsupported claims, indicating poor regulatory comprehension.
 

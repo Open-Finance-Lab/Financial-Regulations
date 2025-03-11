@@ -1,6 +1,6 @@
-=============================
+===================================
 Model Openness Framework (MOF)
-=============================
+===================================
 
 Task Description
 ====================
@@ -12,7 +12,7 @@ and responsibility in open-source machine learning. Each MOF component has
 specific licensing criteria to ensure that contributors uphold intellectual
 property rights while enabling open collaboration.
 
-.. figure:: images/2024-Model-Openess-Framework_v1-15M-2.png
+.. figure:: ../_static/2024-Model-Openess-Framework_v1-15M-2.png
    :alt: MOF Components
    :align: center
    :width: 80%
@@ -35,7 +35,7 @@ Subtasks
    - Provide detailed answers about licensing requirements in MOF.
 
 Input Format
---------
+----------------
 Each subtask will present a primary request in the form of:
 
 - **Primary Request**:  
@@ -50,7 +50,7 @@ Each subtask will present a primary request in the form of:
   However, many prompts may not include separate content if the request is self-contained.
 
 Output Format
---------
+----------------
 The model should output:
 
 - **Concise Answer**:  

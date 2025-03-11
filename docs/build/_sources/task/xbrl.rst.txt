@@ -1,6 +1,6 @@
-=============================
+==========================================================
 eXtensible Business Reporting Language (XBRL)
-=============================
+==========================================================
 
 Task Description
 ====================
@@ -10,16 +10,16 @@ Companies need to provide accurate and standardized financial information to sta
 
 
 **Example Input and Output:**
---------------------
+----------------------------------------
 
 **XBRL Term**
---------------------
+----------------------------------------
 Q: What does the term 'abstract' mean in the context of the XBRL standard? Please provide a detailed explanation of this term.
 
 A: An attribute of an element to indicate that the element is only used in a hierarchy to group related elements together. An abstract element cannot be used to tag data in an instance document.
 
 **Domain Query to XBRL Reports**
---------------------
+----------------------------------------
 Q: Among operations, investing, and financing activities, which brought in the most net (or lowest net) cash flow for Nike in FY2023?
 
 A: Among the three, cash flow from operations was the highest for Nike in FY2023.
@@ -32,14 +32,14 @@ Q: A project expects annual cash inflows of $6,000 over 7 years. If the discount
 A: 21462.58
 
 **Numeric Query to XBRL Reports**
---------------------
+----------------------------------------
 Q: What is the FY2015 unadjusted EBITDA margin for Netflix? Calculate unadjusted EBITDA using unadjusted operating income and D&A.
 
 A: 0.054
 
 Below are examples of XBRL-related questions:
 
-.. figure:: images/datasets.png
+.. figure:: ../_static/datasets.png
    :alt: XBRL Example
    :align: center
    :width: 80%
@@ -55,7 +55,7 @@ The XBRL benchmark dataset is used to evaluate the ability of LLMs to interpret 
 The questions for XBRL terms is to evaluate LLMs’ ability to explain an XBRL term. Domain queries are questions about different domains, such as products and services, in XBRL reports. Numeric queries are questions asking LLMs to retrieve specific data from XBRL reports. Tag queries are questions asking LLMs to retrieve corresponding tags for an item from XBRL reports. Financial math questions asking LLMs to return the result of the given math problem. Financial ratio formula questions ask LLMs to return the calculation formula with corresponding tags for a given financial ratio.
 
 Data statistics
-----------
+------------------
 
 .. list-table::
    :header-rows: 1
@@ -97,7 +97,7 @@ Metrics
 We use accuracy for financial math questions, numeric queries to XBRL reports, tag queries to XBRL reports, and financial ratio formulas. We use FActScore for XBRL terms and domain queries to XBRL reports.
 
 Baseline Performance
-----------
+------------------------------
 
 .. list-table::
    :header-rows: 1

@@ -29,7 +29,7 @@ Curation Workflow
 
 The following figure illustrates the curation flow for our testing sets:
 
-.. figure:: images/overview_method.png
+.. figure:: ../_static/overview_method.png
    :alt: Curation Workflow Diagram
    :align: center
    :width: 80%
