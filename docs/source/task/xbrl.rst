@@ -67,23 +67,23 @@ Data statistics
    * - XBRL Term
      - 500
      - Not provided
-     - `XBRL International Website` <br> `XBRL Documents on the SEC Website`
+     - `XBRL Agent`
    * - Domain Query to XBRL Reports
      - 50
      - Selectively provided
-     - `XBRL Reports in FinanceBench`
+     - `XBRL Agent`
    * - Financial Math
      - 90
      - Not provided
-     - `ChatGPT for formulas and code, verified by a human`
+     - `XBRL Agent`
    * - Numeric Query to XBRL Reports
      - 50
      - Selectively provided
-     - `XBRL Reports in FinanceBench`
+     - `XBRL Agent`
    * - XBRL Tag Query to XBRL Reports
      - 50
      - Selectively provided
-     - `XBRL Reports of Companies in Dow Jones 30 from the SEC`
+     - `XBRL filings from SEC`
    * - **Total**
      - **790**
      - 
