@@ -84,8 +84,16 @@ Data statistics
      - 50
      - Selectively provided
      - `XBRL filings from SEC`
+   * - FiNER: Financial Numeric Entity Recognition for XBRL Tagging 
+     - 100
+     - Selectively provided
+     - `FiNER-139 Dataset: https://huggingface.co/datasets/nlpaueb/finer-139, https://github.com/nlpaueb/finer`
+   * - FNXL: Financial Numeric Extreme Labelling
+     - 100
+     - Selectively provided
+     - `FNXL Dataset: https://huggingface.co/datasets/ChanceFocus/flare-fnxl, https://arxiv.org/abs/2306.03723` 
    * - **Total**
-     - **790**
+     - **940**
      - 
      - 
 
