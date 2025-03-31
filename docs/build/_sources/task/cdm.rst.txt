@@ -38,7 +38,7 @@ Example Input-Output
 **Input**  
 ::
 
-    "Provide a concise answer to the following question related to the Financial Industry Operating Network’s (FINO) Common Domain Model (CDM): 
+    "Provide a concise answer to the following question related to the Fintech Open Source Foundation (FINOS) Common Domain Model (CDM): 
     What are the key components of a CDM product model?"
 
 **Expected Output**  
